@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsfrm601_15QuotationAnalysis" targetNamespace="http://tempuri.org/dsfrm601_15QuotationAnalysis.xsd" xmlns:mstns="http://tempuri.org/dsfrm601_15QuotationAnalysis.xsd" xmlns="http://tempuri.org/dsfrm601_15QuotationAnalysis.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ERPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ERPConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="IMSdbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IMSdbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="IMSdbConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IMSdbConnectionString3 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString3" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qry607_08QuotationAnalysisPVGTableAdapter" GeneratorDataComponentClassName="qry607_08QuotationAnalysisPVGTableAdapter" Name="qry607_08QuotationAnalysisPVG" UserDataComponentName="qry607_08QuotationAnalysisPVGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IMSdbConnectionString3 (MySettings)" DbObjectName="ERP.dbo.qry607_08QuotationAnalysisPVG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RFQNo, RFQDate, MPRNo, SupplierCode, SupplierName, GSCode, GSDescrpition, UnitDesc, QuotedQuantity, UnitPrice, LineTotalBeforeTax, ItemDiscount, LineTotalAfterDisc, RFQChildSlNo, IsWonForPO, 
+                         ReasonForSelection
+FROM            qry607_08QuotationAnalysisPVG</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RFQNo" DataSetColumn="RFQNo" />
+              <Mapping SourceColumn="RFQDate" DataSetColumn="RFQDate" />
+              <Mapping SourceColumn="MPRNo" DataSetColumn="MPRNo" />
+              <Mapping SourceColumn="SupplierCode" DataSetColumn="SupplierCode" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+              <Mapping SourceColumn="GSCode" DataSetColumn="GSCode" />
+              <Mapping SourceColumn="GSDescrpition" DataSetColumn="GSDescrpition" />
+              <Mapping SourceColumn="UnitDesc" DataSetColumn="UnitDesc" />
+              <Mapping SourceColumn="QuotedQuantity" DataSetColumn="QuotedQuantity" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="LineTotalBeforeTax" DataSetColumn="LineTotalBeforeTax" />
+              <Mapping SourceColumn="ItemDiscount" DataSetColumn="ItemDiscount" />
+              <Mapping SourceColumn="LineTotalAfterDisc" DataSetColumn="LineTotalAfterDisc" />
+              <Mapping SourceColumn="RFQChildSlNo" DataSetColumn="RFQChildSlNo" />
+              <Mapping SourceColumn="IsWonForPO" DataSetColumn="IsWonForPO" />
+              <Mapping SourceColumn="ReasonForSelection" DataSetColumn="ReasonForSelection" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ERPConnectionString (MySettings)" DbObjectName="ERP.dbo.qry607_08QuotationAnalysisPVG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByMPRNo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMPRNo" GeneratorSourceName="FillByMPRNo" GetMethodModifier="Public" GetMethodName="GetDataByMPRNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMPRNo" UserSourceName="FillByMPRNo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT GSCode, GSDescrpition, IsWonForPO, ItemDiscount, LineTotalAfterDisc, LineTotalBeforeTax, MPRNo, QuotedQuantity, RFQChildSlNo, RFQDate, RFQNo, ReasonForSelection, SupplierCode, SupplierName, UnitDesc, UnitPrice FROM qry607_08QuotationAnalysisPVG WHERE (MPRNo = @MPRNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="MPRNo" ColumnName="MPRNo" DataSourceName="ERP.dbo.qry607_08QuotationAnalysisPVG" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@MPRNo" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="MPRNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qry607_07RFQIssuedByMPRNoTableAdapter" GeneratorDataComponentClassName="qry607_07RFQIssuedByMPRNoTableAdapter" Name="qry607_07RFQIssuedByMPRNo" UserDataComponentName="qry607_07RFQIssuedByMPRNoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IMSdbConnectionString3 (MySettings)" DbObjectName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MPRNo, NoOfRFQIssued, MPRDate, ClientName, ClientRefNo, RequestedBy, StoreName, StoreCode, ClientNameOrStoreName, InventoryMasterGroupID, SalesPersonCode, SalesPersonName, SalesPersonUserID
+FROM            qry607_07RFQIssuedByMPRNo_02</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MPRNo" DataSetColumn="MPRNo" />
+              <Mapping SourceColumn="NoOfRFQIssued" DataSetColumn="NoOfRFQIssued" />
+              <Mapping SourceColumn="MPRDate" DataSetColumn="MPRDate" />
+              <Mapping SourceColumn="ClientName" DataSetColumn="ClientName" />
+              <Mapping SourceColumn="ClientRefNo" DataSetColumn="ClientRefNo" />
+              <Mapping SourceColumn="RequestedBy" DataSetColumn="RequestedBy" />
+              <Mapping SourceColumn="StoreName" DataSetColumn="StoreName" />
+              <Mapping SourceColumn="StoreCode" DataSetColumn="StoreCode" />
+              <Mapping SourceColumn="ClientNameOrStoreName" DataSetColumn="ClientNameOrStoreName" />
+              <Mapping SourceColumn="InventoryMasterGroupID" DataSetColumn="InventoryMasterGroupID" />
+              <Mapping SourceColumn="SalesPersonCode" DataSetColumn="SalesPersonCode" />
+              <Mapping SourceColumn="SalesPersonName" DataSetColumn="SalesPersonName" />
+              <Mapping SourceColumn="SalesPersonUserID" DataSetColumn="SalesPersonUserID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="IMSdbConnectionString3 (MySettings)" DbObjectName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByGroupBySalesPersonUserID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGroupBySalesPersonUserID" GeneratorSourceName="FillByGroupBySalesPersonUserID" GetMethodModifier="Public" GetMethodName="GetDataByGroupBySalesPersonUserID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGroupBySalesPersonUserID" UserSourceName="FillByGroupBySalesPersonUserID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ClientName, ClientNameOrStoreName, ClientRefNo, InventoryMasterGroupID, MPRDate, MPRNo, NoOfRFQIssued, RequestedBy, SalesPersonCode, SalesPersonName, SalesPersonUserID, StoreCode, StoreName FROM qry607_07RFQIssuedByMPRNo_02 WHERE (InventoryMasterGroupID = @InventoryMasterGroupID) and (SalesPersonUserID = @SalesPersonUserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="InventoryMasterGroupID" ColumnName="InventoryMasterGroupID" DataSourceName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@InventoryMasterGroupID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="InventoryMasterGroupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SalesPersonUserID" ColumnName="SalesPersonUserID" DataSourceName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@SalesPersonUserID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="SalesPersonUserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="IMSdbConnectionString (MySettings)" DbObjectName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByInventoryMasterGroupID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByInventoryMasterGroupID" GeneratorSourceName="FillByInventoryMasterGroupID" GetMethodModifier="Public" GetMethodName="GetDataByInventoryMasterGroupID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByInventoryMasterGroupID" UserSourceName="FillByInventoryMasterGroupID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ClientName, ClientNameOrStoreName, ClientRefNo, InventoryMasterGroupID, MPRDate, MPRNo, NoOfRFQIssued, RequestedBy, SalesPersonCode, SalesPersonName, SalesPersonUserID, StoreCode, StoreName FROM qry607_07RFQIssuedByMPRNo_02 WHERE (InventoryMasterGroupID = @InventoryMasterGroupID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="InventoryMasterGroupID" ColumnName="InventoryMasterGroupID" DataSourceName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@InventoryMasterGroupID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="InventoryMasterGroupID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="IMSdbConnectionString3 (MySettings)" DbObjectName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBySalesPersonUSERID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySalesPersonUSERID" GeneratorSourceName="FillBySalesPersonUSERID" GetMethodModifier="Public" GetMethodName="GetDataBySalesPersonUSERID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySalesPersonUSERID" UserSourceName="FillBySalesPersonUSERID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MPRNo, NoOfRFQIssued, MPRDate, ClientName, ClientRefNo, RequestedBy, StoreName, StoreCode, ClientNameOrStoreName, InventoryMasterGroupID, SalesPersonCode, SalesPersonName, SalesPersonUserID
+FROM            qry607_07RFQIssuedByMPRNo_02
+Where SalesPersonUserID = @SalesPersonUserID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="SalesPersonUserID" ColumnName="SalesPersonUserID" DataSourceName="ERP.dbo.qry607_07RFQIssuedByMPRNo_02" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@SalesPersonUserID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="SalesPersonUserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsfrm601_15QuotationAnalysis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsfrm601_15QuotationAnalysis" msprop:Generator_UserDSName="dsfrm601_15QuotationAnalysis">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qry607_08QuotationAnalysisPVG" msprop:Generator_TableClassName="qry607_08QuotationAnalysisPVGDataTable" msprop:Generator_TableVarName="tableqry607_08QuotationAnalysisPVG" msprop:Generator_RowChangedName="qry607_08QuotationAnalysisPVGRowChanged" msprop:Generator_TablePropName="qry607_08QuotationAnalysisPVG" msprop:Generator_RowDeletingName="qry607_08QuotationAnalysisPVGRowDeleting" msprop:Generator_RowChangingName="qry607_08QuotationAnalysisPVGRowChanging" msprop:Generator_RowEvHandlerName="qry607_08QuotationAnalysisPVGRowChangeEventHandler" msprop:Generator_RowDeletedName="qry607_08QuotationAnalysisPVGRowDeleted" msprop:Generator_RowClassName="qry607_08QuotationAnalysisPVGRow" msprop:Generator_UserTableName="qry607_08QuotationAnalysisPVG" msprop:Generator_RowEvArgName="qry607_08QuotationAnalysisPVGRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RFQNo" msprop:Generator_ColumnVarNameInTable="columnRFQNo" msprop:Generator_ColumnPropNameInRow="RFQNo" msprop:Generator_ColumnPropNameInTable="RFQNoColumn" msprop:Generator_UserColumnName="RFQNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFQDate" msprop:Generator_ColumnVarNameInTable="columnRFQDate" msprop:Generator_ColumnPropNameInRow="RFQDate" msprop:Generator_ColumnPropNameInTable="RFQDateColumn" msprop:Generator_UserColumnName="RFQDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MPRNo" msprop:Generator_ColumnVarNameInTable="columnMPRNo" msprop:Generator_ColumnPropNameInRow="MPRNo" msprop:Generator_ColumnPropNameInTable="MPRNoColumn" msprop:Generator_UserColumnName="MPRNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierCode" msprop:Generator_ColumnVarNameInTable="columnSupplierCode" msprop:Generator_ColumnPropNameInRow="SupplierCode" msprop:Generator_ColumnPropNameInTable="SupplierCodeColumn" msprop:Generator_UserColumnName="SupplierCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" msprop:Generator_UserColumnName="SupplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSCode" msprop:Generator_ColumnVarNameInTable="columnGSCode" msprop:Generator_ColumnPropNameInRow="GSCode" msprop:Generator_ColumnPropNameInTable="GSCodeColumn" msprop:Generator_UserColumnName="GSCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDescrpition" msprop:Generator_ColumnVarNameInTable="columnGSDescrpition" msprop:Generator_ColumnPropNameInRow="GSDescrpition" msprop:Generator_ColumnPropNameInTable="GSDescrpitionColumn" msprop:Generator_UserColumnName="GSDescrpition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitDesc" msprop:Generator_ColumnVarNameInTable="columnUnitDesc" msprop:Generator_ColumnPropNameInRow="UnitDesc" msprop:Generator_ColumnPropNameInTable="UnitDescColumn" msprop:Generator_UserColumnName="UnitDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuotedQuantity" msprop:Generator_ColumnVarNameInTable="columnQuotedQuantity" msprop:Generator_ColumnPropNameInRow="QuotedQuantity" msprop:Generator_ColumnPropNameInTable="QuotedQuantityColumn" msprop:Generator_UserColumnName="QuotedQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LineTotalBeforeTax" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLineTotalBeforeTax" msprop:Generator_ColumnPropNameInRow="LineTotalBeforeTax" msprop:Generator_ColumnPropNameInTable="LineTotalBeforeTaxColumn" msprop:Generator_UserColumnName="LineTotalBeforeTax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemDiscount" msprop:Generator_ColumnVarNameInTable="columnItemDiscount" msprop:Generator_ColumnPropNameInRow="ItemDiscount" msprop:Generator_ColumnPropNameInTable="ItemDiscountColumn" msprop:Generator_UserColumnName="ItemDiscount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LineTotalAfterDisc" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLineTotalAfterDisc" msprop:Generator_ColumnPropNameInRow="LineTotalAfterDisc" msprop:Generator_ColumnPropNameInTable="LineTotalAfterDiscColumn" msprop:Generator_UserColumnName="LineTotalAfterDisc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RFQChildSlNo" msprop:Generator_ColumnVarNameInTable="columnRFQChildSlNo" msprop:Generator_ColumnPropNameInRow="RFQChildSlNo" msprop:Generator_ColumnPropNameInTable="RFQChildSlNoColumn" msprop:Generator_UserColumnName="RFQChildSlNo" type="xs:long" minOccurs="0" />
+              <xs:element name="IsWonForPO" msprop:Generator_ColumnVarNameInTable="columnIsWonForPO" msprop:Generator_ColumnPropNameInRow="IsWonForPO" msprop:Generator_ColumnPropNameInTable="IsWonForPOColumn" msprop:Generator_UserColumnName="IsWonForPO" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReasonForSelection" msprop:Generator_ColumnVarNameInTable="columnReasonForSelection" msprop:Generator_ColumnPropNameInRow="ReasonForSelection" msprop:Generator_ColumnPropNameInTable="ReasonForSelectionColumn" msprop:Generator_UserColumnName="ReasonForSelection" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qry607_07RFQIssuedByMPRNo" msprop:Generator_TableClassName="qry607_07RFQIssuedByMPRNoDataTable" msprop:Generator_TableVarName="tableqry607_07RFQIssuedByMPRNo" msprop:Generator_RowChangedName="qry607_07RFQIssuedByMPRNoRowChanged" msprop:Generator_TablePropName="qry607_07RFQIssuedByMPRNo" msprop:Generator_RowDeletingName="qry607_07RFQIssuedByMPRNoRowDeleting" msprop:Generator_RowChangingName="qry607_07RFQIssuedByMPRNoRowChanging" msprop:Generator_RowEvHandlerName="qry607_07RFQIssuedByMPRNoRowChangeEventHandler" msprop:Generator_RowDeletedName="qry607_07RFQIssuedByMPRNoRowDeleted" msprop:Generator_RowClassName="qry607_07RFQIssuedByMPRNoRow" msprop:Generator_UserTableName="qry607_07RFQIssuedByMPRNo" msprop:Generator_RowEvArgName="qry607_07RFQIssuedByMPRNoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPRNo" msprop:Generator_ColumnVarNameInTable="columnMPRNo" msprop:Generator_ColumnPropNameInRow="MPRNo" msprop:Generator_ColumnPropNameInTable="MPRNoColumn" msprop:Generator_UserColumnName="MPRNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoOfRFQIssued" msprop:Generator_ColumnVarNameInTable="columnNoOfRFQIssued" msprop:Generator_ColumnPropNameInRow="NoOfRFQIssued" msprop:Generator_ColumnPropNameInTable="NoOfRFQIssuedColumn" msprop:Generator_UserColumnName="NoOfRFQIssued" type="xs:int" minOccurs="0" />
+              <xs:element name="MPRDate" msprop:Generator_ColumnVarNameInTable="columnMPRDate" msprop:Generator_ColumnPropNameInRow="MPRDate" msprop:Generator_ColumnPropNameInTable="MPRDateColumn" msprop:Generator_UserColumnName="MPRDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" msprop:Generator_UserColumnName="ClientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientRefNo" msprop:Generator_ColumnVarNameInTable="columnClientRefNo" msprop:Generator_ColumnPropNameInRow="ClientRefNo" msprop:Generator_ColumnPropNameInTable="ClientRefNoColumn" msprop:Generator_UserColumnName="ClientRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedBy" msprop:Generator_ColumnVarNameInTable="columnRequestedBy" msprop:Generator_ColumnPropNameInRow="RequestedBy" msprop:Generator_ColumnPropNameInTable="RequestedByColumn" msprop:Generator_UserColumnName="RequestedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StoreName" msprop:Generator_ColumnVarNameInTable="columnStoreName" msprop:Generator_ColumnPropNameInRow="StoreName" msprop:Generator_ColumnPropNameInTable="StoreNameColumn" msprop:Generator_UserColumnName="StoreName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StoreCode" msprop:Generator_ColumnVarNameInTable="columnStoreCode" msprop:Generator_ColumnPropNameInRow="StoreCode" msprop:Generator_ColumnPropNameInTable="StoreCodeColumn" msprop:Generator_UserColumnName="StoreCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientNameOrStoreName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClientNameOrStoreName" msprop:Generator_ColumnPropNameInRow="ClientNameOrStoreName" msprop:Generator_ColumnPropNameInTable="ClientNameOrStoreNameColumn" msprop:Generator_UserColumnName="ClientNameOrStoreName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventoryMasterGroupID" msprop:Generator_ColumnVarNameInTable="columnInventoryMasterGroupID" msprop:Generator_ColumnPropNameInRow="InventoryMasterGroupID" msprop:Generator_ColumnPropNameInTable="InventoryMasterGroupIDColumn" msprop:Generator_UserColumnName="InventoryMasterGroupID" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SalesPersonCode" msprop:Generator_ColumnVarNameInTable="columnSalesPersonCode" msprop:Generator_ColumnPropNameInRow="SalesPersonCode" msprop:Generator_ColumnPropNameInTable="SalesPersonCodeColumn" msprop:Generator_UserColumnName="SalesPersonCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalesPersonName" msprop:Generator_ColumnVarNameInTable="columnSalesPersonName" msprop:Generator_ColumnPropNameInRow="SalesPersonName" msprop:Generator_ColumnPropNameInTable="SalesPersonNameColumn" msprop:Generator_UserColumnName="SalesPersonName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalesPersonUserID" msprop:Generator_ColumnVarNameInTable="columnSalesPersonUserID" msprop:Generator_ColumnPropNameInRow="SalesPersonUserID" msprop:Generator_ColumnPropNameInTable="SalesPersonUserIDColumn" msprop:Generator_UserColumnName="SalesPersonUserID" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qry607_08QuotationAnalysisPVG" />
+      <xs:field xpath="mstns:RFQNo" />
+    </xs:unique>
+    <xs:unique name="qry607_07RFQIssuedByMPRNo_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:qry607_07RFQIssuedByMPRNo" />
+      <xs:field xpath="mstns:SalesPersonCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
