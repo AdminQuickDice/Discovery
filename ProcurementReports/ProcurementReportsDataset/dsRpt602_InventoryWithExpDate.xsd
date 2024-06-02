@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRpt602_InventoryWithExpDate" targetNamespace="http://tempuri.org/dsRpt602_InventoryWithExpDate.xsd" xmlns:mstns="http://tempuri.org/dsRpt602_InventoryWithExpDate.xsd" xmlns="http://tempuri.org/dsRpt602_InventoryWithExpDate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ERPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ERPConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qry652_09ExpDtStockBalanceWithDescTableAdapter" GeneratorDataComponentClassName="qry652_09ExpDtStockBalanceWithDescTableAdapter" Name="qry652_09ExpDtStockBalanceWithDesc" UserDataComponentName="qry652_09ExpDtStockBalanceWithDescTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERPConnectionString (MySettings)" DbObjectName="ERP.dbo.qry652_09ExpDtStockBalanceWithDesc" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT GSCode, GSDescrpition, ExpiryDate, BatchNo, TotalOpeningBal, TotalReceived, GrossTotal, TotalIssues, TotalBalance, GSGroupName FROM dbo.qry652_09ExpDtStockBalanceWithDesc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GSCode" DataSetColumn="GSCode" />
+              <Mapping SourceColumn="GSDescrpition" DataSetColumn="GSDescrpition" />
+              <Mapping SourceColumn="ExpiryDate" DataSetColumn="ExpiryDate" />
+              <Mapping SourceColumn="BatchNo" DataSetColumn="BatchNo" />
+              <Mapping SourceColumn="TotalOpeningBal" DataSetColumn="TotalOpeningBal" />
+              <Mapping SourceColumn="TotalReceived" DataSetColumn="TotalReceived" />
+              <Mapping SourceColumn="GrossTotal" DataSetColumn="GrossTotal" />
+              <Mapping SourceColumn="TotalIssues" DataSetColumn="TotalIssues" />
+              <Mapping SourceColumn="TotalBalance" DataSetColumn="TotalBalance" />
+              <Mapping SourceColumn="GSGroupName" DataSetColumn="GSGroupName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRpt602_InventoryWithExpDate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsRpt602_InventoryWithExpDate" msprop:Generator_UserDSName="dsRpt602_InventoryWithExpDate">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qry652_09ExpDtStockBalanceWithDesc" msprop:Generator_TableClassName="qry652_09ExpDtStockBalanceWithDescDataTable" msprop:Generator_TableVarName="tableqry652_09ExpDtStockBalanceWithDesc" msprop:Generator_TablePropName="qry652_09ExpDtStockBalanceWithDesc" msprop:Generator_RowDeletingName="qry652_09ExpDtStockBalanceWithDescRowDeleting" msprop:Generator_RowChangingName="qry652_09ExpDtStockBalanceWithDescRowChanging" msprop:Generator_RowEvHandlerName="qry652_09ExpDtStockBalanceWithDescRowChangeEventHandler" msprop:Generator_RowDeletedName="qry652_09ExpDtStockBalanceWithDescRowDeleted" msprop:Generator_UserTableName="qry652_09ExpDtStockBalanceWithDesc" msprop:Generator_RowChangedName="qry652_09ExpDtStockBalanceWithDescRowChanged" msprop:Generator_RowEvArgName="qry652_09ExpDtStockBalanceWithDescRowChangeEvent" msprop:Generator_RowClassName="qry652_09ExpDtStockBalanceWithDescRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GSCode" msprop:Generator_ColumnVarNameInTable="columnGSCode" msprop:Generator_ColumnPropNameInRow="GSCode" msprop:Generator_ColumnPropNameInTable="GSCodeColumn" msprop:Generator_UserColumnName="GSCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDescrpition" msprop:Generator_ColumnVarNameInTable="columnGSDescrpition" msprop:Generator_ColumnPropNameInRow="GSDescrpition" msprop:Generator_ColumnPropNameInTable="GSDescrpitionColumn" msprop:Generator_UserColumnName="GSDescrpition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExpiryDate" msprop:Generator_ColumnVarNameInTable="columnExpiryDate" msprop:Generator_ColumnPropNameInRow="ExpiryDate" msprop:Generator_ColumnPropNameInTable="ExpiryDateColumn" msprop:Generator_UserColumnName="ExpiryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BatchNo" msprop:Generator_ColumnVarNameInTable="columnBatchNo" msprop:Generator_ColumnPropNameInRow="BatchNo" msprop:Generator_ColumnPropNameInTable="BatchNoColumn" msprop:Generator_UserColumnName="BatchNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalOpeningBal" msprop:Generator_ColumnVarNameInTable="columnTotalOpeningBal" msprop:Generator_ColumnPropNameInRow="TotalOpeningBal" msprop:Generator_ColumnPropNameInTable="TotalOpeningBalColumn" msprop:Generator_UserColumnName="TotalOpeningBal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalReceived" msprop:Generator_ColumnVarNameInTable="columnTotalReceived" msprop:Generator_ColumnPropNameInRow="TotalReceived" msprop:Generator_ColumnPropNameInTable="TotalReceivedColumn" msprop:Generator_UserColumnName="TotalReceived" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GrossTotal" msprop:Generator_ColumnVarNameInTable="columnGrossTotal" msprop:Generator_ColumnPropNameInRow="GrossTotal" msprop:Generator_ColumnPropNameInTable="GrossTotalColumn" msprop:Generator_UserColumnName="GrossTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalIssues" msprop:Generator_ColumnVarNameInTable="columnTotalIssues" msprop:Generator_ColumnPropNameInRow="TotalIssues" msprop:Generator_ColumnPropNameInTable="TotalIssuesColumn" msprop:Generator_UserColumnName="TotalIssues" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalBalance" msprop:Generator_ColumnVarNameInTable="columnTotalBalance" msprop:Generator_ColumnPropNameInRow="TotalBalance" msprop:Generator_ColumnPropNameInTable="TotalBalanceColumn" msprop:Generator_UserColumnName="TotalBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSGroupName" msprop:Generator_ColumnVarNameInTable="columnGSGroupName" msprop:Generator_ColumnPropNameInRow="GSGroupName" msprop:Generator_ColumnPropNameInTable="GSGroupNameColumn" msprop:Generator_UserColumnName="GSGroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
