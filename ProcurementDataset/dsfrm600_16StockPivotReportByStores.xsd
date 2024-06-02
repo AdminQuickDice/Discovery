@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsfrm600_16StockPivotReportByStores" targetNamespace="http://tempuri.org/dsfrm600_16StockPivotReportByStores.xsd" xmlns:mstns="http://tempuri.org/dsfrm600_16StockPivotReportByStores.xsd" xmlns="http://tempuri.org/dsfrm600_16StockPivotReportByStores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ERPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ERPConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString3" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="IMSdbConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IMSdbConnectionString3 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ERP.My.MySettings.GlobalReference.Default.IMSdbConnectionString3" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qry653_20StoreStockBalanceWtStoreCodeTableAdapter" GeneratorDataComponentClassName="qry653_20StoreStockBalanceWtStoreCodeTableAdapter" Name="qry653_20StoreStockBalanceWtStoreCode" UserDataComponentName="qry653_20StoreStockBalanceWtStoreCodeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IMSdbConnectionString3 (MySettings)" DbObjectName="ERP.dbo.qry653_20StoreStockBalanceWtStoreCode" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        GSCode, GSDescrpition, GSDescriptionAr, GSDetailedDesc, GSDetailedDescAr, GSGroupID, HSCode, IsDiscontinued, ItemPartNo, InventoryMasterGroupID, CostPrice, GSSellingRate, ExFactoryCostPrice, CurrentyQty, StoreCode,
+                          IsServicesGroup, GSGroupName, UnitDesc
+FROM            qry653_20StoreStockBalanceWtStoreCode
+where Isnull(IsServicesGroup, 0) = 0</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GSCode" DataSetColumn="GSCode" />
+              <Mapping SourceColumn="GSDescrpition" DataSetColumn="GSDescrpition" />
+              <Mapping SourceColumn="GSDescriptionAr" DataSetColumn="GSDescriptionAr" />
+              <Mapping SourceColumn="GSDetailedDesc" DataSetColumn="GSDetailedDesc" />
+              <Mapping SourceColumn="GSDetailedDescAr" DataSetColumn="GSDetailedDescAr" />
+              <Mapping SourceColumn="GSGroupID" DataSetColumn="GSGroupID" />
+              <Mapping SourceColumn="HSCode" DataSetColumn="HSCode" />
+              <Mapping SourceColumn="IsDiscontinued" DataSetColumn="IsDiscontinued" />
+              <Mapping SourceColumn="ItemPartNo" DataSetColumn="ItemPartNo" />
+              <Mapping SourceColumn="InventoryMasterGroupID" DataSetColumn="InventoryMasterGroupID" />
+              <Mapping SourceColumn="CostPrice" DataSetColumn="CostPrice" />
+              <Mapping SourceColumn="GSSellingRate" DataSetColumn="GSSellingRate" />
+              <Mapping SourceColumn="ExFactoryCostPrice" DataSetColumn="ExFactoryCostPrice" />
+              <Mapping SourceColumn="CurrentyQty" DataSetColumn="CurrentyQty" />
+              <Mapping SourceColumn="StoreCode" DataSetColumn="StoreCode" />
+              <Mapping SourceColumn="IsServicesGroup" DataSetColumn="IsServicesGroup" />
+              <Mapping SourceColumn="GSGroupName" DataSetColumn="GSGroupName" />
+              <Mapping SourceColumn="UnitDesc" DataSetColumn="UnitDesc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsfrm600_16StockPivotReportByStores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsfrm600_16StockPivotReportByStores" msprop:Generator_UserDSName="dsfrm600_16StockPivotReportByStores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qry653_20StoreStockBalanceWtStoreCode" msprop:Generator_TableClassName="qry653_20StoreStockBalanceWtStoreCodeDataTable" msprop:Generator_TableVarName="tableqry653_20StoreStockBalanceWtStoreCode" msprop:Generator_TablePropName="qry653_20StoreStockBalanceWtStoreCode" msprop:Generator_RowDeletingName="qry653_20StoreStockBalanceWtStoreCodeRowDeleting" msprop:Generator_RowChangingName="qry653_20StoreStockBalanceWtStoreCodeRowChanging" msprop:Generator_RowEvHandlerName="qry653_20StoreStockBalanceWtStoreCodeRowChangeEventHandler" msprop:Generator_RowDeletedName="qry653_20StoreStockBalanceWtStoreCodeRowDeleted" msprop:Generator_UserTableName="qry653_20StoreStockBalanceWtStoreCode" msprop:Generator_RowChangedName="qry653_20StoreStockBalanceWtStoreCodeRowChanged" msprop:Generator_RowEvArgName="qry653_20StoreStockBalanceWtStoreCodeRowChangeEvent" msprop:Generator_RowClassName="qry653_20StoreStockBalanceWtStoreCodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GSCode" msprop:Generator_ColumnVarNameInTable="columnGSCode" msprop:Generator_ColumnPropNameInRow="GSCode" msprop:Generator_ColumnPropNameInTable="GSCodeColumn" msprop:Generator_UserColumnName="GSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDescrpition" msprop:Generator_ColumnVarNameInTable="columnGSDescrpition" msprop:Generator_ColumnPropNameInRow="GSDescrpition" msprop:Generator_ColumnPropNameInTable="GSDescrpitionColumn" msprop:Generator_UserColumnName="GSDescrpition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDescriptionAr" msprop:Generator_ColumnVarNameInTable="columnGSDescriptionAr" msprop:Generator_ColumnPropNameInRow="GSDescriptionAr" msprop:Generator_ColumnPropNameInTable="GSDescriptionArColumn" msprop:Generator_UserColumnName="GSDescriptionAr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDetailedDesc" msprop:Generator_ColumnVarNameInTable="columnGSDetailedDesc" msprop:Generator_ColumnPropNameInRow="GSDetailedDesc" msprop:Generator_ColumnPropNameInTable="GSDetailedDescColumn" msprop:Generator_UserColumnName="GSDetailedDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSDetailedDescAr" msprop:Generator_ColumnVarNameInTable="columnGSDetailedDescAr" msprop:Generator_ColumnPropNameInRow="GSDetailedDescAr" msprop:Generator_ColumnPropNameInTable="GSDetailedDescArColumn" msprop:Generator_UserColumnName="GSDetailedDescAr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSGroupID" msprop:Generator_ColumnVarNameInTable="columnGSGroupID" msprop:Generator_ColumnPropNameInRow="GSGroupID" msprop:Generator_ColumnPropNameInTable="GSGroupIDColumn" msprop:Generator_UserColumnName="GSGroupID" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="HSCode" msprop:Generator_ColumnVarNameInTable="columnHSCode" msprop:Generator_ColumnPropNameInRow="HSCode" msprop:Generator_ColumnPropNameInTable="HSCodeColumn" msprop:Generator_UserColumnName="HSCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsDiscontinued" msprop:Generator_ColumnVarNameInTable="columnIsDiscontinued" msprop:Generator_ColumnPropNameInRow="IsDiscontinued" msprop:Generator_ColumnPropNameInTable="IsDiscontinuedColumn" msprop:Generator_UserColumnName="IsDiscontinued" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ItemPartNo" msprop:Generator_ColumnVarNameInTable="columnItemPartNo" msprop:Generator_ColumnPropNameInRow="ItemPartNo" msprop:Generator_ColumnPropNameInTable="ItemPartNoColumn" msprop:Generator_UserColumnName="ItemPartNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventoryMasterGroupID" msprop:Generator_ColumnVarNameInTable="columnInventoryMasterGroupID" msprop:Generator_ColumnPropNameInRow="InventoryMasterGroupID" msprop:Generator_ColumnPropNameInTable="InventoryMasterGroupIDColumn" msprop:Generator_UserColumnName="InventoryMasterGroupID" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CostPrice" msprop:Generator_ColumnVarNameInTable="columnCostPrice" msprop:Generator_ColumnPropNameInRow="CostPrice" msprop:Generator_ColumnPropNameInTable="CostPriceColumn" msprop:Generator_UserColumnName="CostPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSSellingRate" msprop:Generator_ColumnVarNameInTable="columnGSSellingRate" msprop:Generator_ColumnPropNameInRow="GSSellingRate" msprop:Generator_ColumnPropNameInTable="GSSellingRateColumn" msprop:Generator_UserColumnName="GSSellingRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExFactoryCostPrice" msprop:Generator_ColumnVarNameInTable="columnExFactoryCostPrice" msprop:Generator_ColumnPropNameInRow="ExFactoryCostPrice" msprop:Generator_ColumnPropNameInTable="ExFactoryCostPriceColumn" msprop:Generator_UserColumnName="ExFactoryCostPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CurrentyQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCurrentyQty" msprop:Generator_ColumnPropNameInRow="CurrentyQty" msprop:Generator_ColumnPropNameInTable="CurrentyQtyColumn" msprop:Generator_UserColumnName="CurrentyQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StoreCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStoreCode" msprop:Generator_ColumnPropNameInRow="StoreCode" msprop:Generator_ColumnPropNameInTable="StoreCodeColumn" msprop:Generator_UserColumnName="StoreCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsServicesGroup" msprop:Generator_ColumnVarNameInTable="columnIsServicesGroup" msprop:Generator_ColumnPropNameInRow="IsServicesGroup" msprop:Generator_ColumnPropNameInTable="IsServicesGroupColumn" msprop:Generator_UserColumnName="IsServicesGroup" type="xs:boolean" minOccurs="0" />
+              <xs:element name="GSGroupName" msprop:Generator_ColumnVarNameInTable="columnGSGroupName" msprop:Generator_ColumnPropNameInRow="GSGroupName" msprop:Generator_ColumnPropNameInTable="GSGroupNameColumn" msprop:Generator_UserColumnName="GSGroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitDesc" msprop:Generator_ColumnVarNameInTable="columnUnitDesc" msprop:Generator_ColumnPropNameInRow="UnitDesc" msprop:Generator_ColumnPropNameInTable="UnitDescColumn" msprop:Generator_UserColumnName="UnitDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qry653_20StoreStockBalanceWtStoreCode" />
+      <xs:field xpath="mstns:GSCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
